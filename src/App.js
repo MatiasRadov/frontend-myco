@@ -1,25 +1,52 @@
+import React, { Fragment } from "react";
+import { BrowserRouter as Router, Routes ,Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import "bootstrap/dist/js/bootstrap.bundle";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@popperjs/core";
+import Home from './views/Home';
+import Login from './views/Login';
+import Previewapp from './views/Previewapp';
+import Preview from "./views/Previewapp";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Fragment>
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Routes>
+          <Route path="/login" element= {<Login />}>
+          </Route>
+          <Route path="/preview" element= {<Previewapp />}>
+          </Route>
+          <Route path="/" element= {<Home />}>
+          </Route>
+        </Routes>
+        </Fragment>
+    </Router>
   );
 }
 
-export default App;
+
+
+
+/**/
+
+/*const Li = () => {
+  return (
+    <li>valor</li>
+  )
+}
+
+const App = () => {
+  const valor = 'honguito'
+  return (
+  <ul className="clase-css">
+    Myco App { valor }</ul>
+  );
+}
+
+export default App;*/
