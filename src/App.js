@@ -8,7 +8,7 @@ import "@popperjs/core";
 import Home from './views/Home';
 import Login from './views/Login';
 import Previewapp from './views/Previewapp';
-import Preview from "./views/Previewapp";
+//import Preview from "./views/Previewapp";
 
 export default function App() {
   return (
