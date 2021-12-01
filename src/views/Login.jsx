@@ -1,6 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
+import { Context } from '../store/appContext';
+
 
 function Login() {
+  const {store, actions} = useContext(Context)
   return (
     <>
       <div className="container">
@@ -10,7 +13,7 @@ function Login() {
               className="img-fluid img-thumbnail rounded-circle"
               width="150"
               height="150"
-              src="public\images\cordyceps-millitaris.jpg"
+              src="../images/cordyceps-millitaris.jpg"
               alt="mushroom"
             />
 
@@ -19,7 +22,7 @@ function Login() {
         </div>
         <div className="row justify-content-center">
           <div className="col-4 align-self-center">
-            <form className="clase-form">
+            <form className="clase-form" onSubmit={e => actions.handleSubmit(e)}>
               <div className="mb-3">
                 <h6 className="text-muted">Inicia sesión</h6>
                 <label for="exampleInputEmail1" className="form-label">
@@ -27,6 +30,8 @@ function Login() {
                 </label>
                 <input
                   type="email"
+                  name= "email"
+                  onChange={e => actions.handleChange(e)}
                   className="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
@@ -41,6 +46,8 @@ function Login() {
                 </label>
                 <input
                   type="password"
+                  name="password"
+                  onChange={e => actions.handleChange(e)}
                   className="form-control"
                   id="exampleInputPassword1"
                 />
@@ -48,32 +55,12 @@ function Login() {
                   Iniciar sesión
                 </button>
               </div>
-              <div className="mb-3 form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input"
-                  id="exampleCheck1"
-                />
-                <label className="form-check-label" for="exampleCheck1">
-                  Recuérdame
-                </label>
-              </div>
-              <div className="mb-3 form-check">
-                <input
-                  type="checkbox"
-                  className="form-check-input"
-                  id="exampleCheck1"
-                />
-                <label className="form-check-label" for="exampleCheck1">
-                  Colaborador
-                </label>
-              </div>
               <div>
                 <hr />
                 <h6 className="text-muted">¿Nuevo por acá?</h6>
-                <button type="submit" className="btn btn-primary">
+                <a className="btn btn-primary">
                   Regístrate
-                </button>
+                </a>
               </div>
             </form>
           </div>
@@ -83,6 +70,5 @@ function Login() {
   );
 }
 
-//ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=15;align=center;
 
 export default Login;

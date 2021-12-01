@@ -8,9 +8,11 @@ import "@popperjs/core";
 import Home from './views/Home';
 import Login from './views/Login';
 import Previewapp from './views/Previewapp';
+import injectContext from "./store/appContext";
+import CollabForm from "./views/CollabForm";
 //import Preview from "./views/Previewapp";
 
-export default function App() {
+const App = () => {
   return (
     <Router>
       <Fragment>
@@ -24,13 +26,15 @@ export default function App() {
           </Route>
           <Route path="/" element= {<Home />}>
           </Route>
+          <Route path="/collabform" element= {<CollabForm />}>
+          </Route>
         </Routes>
         </Fragment>
     </Router>
   );
 }
 
-
+export default injectContext(App)
 
 
 /**/
