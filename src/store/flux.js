@@ -11,7 +11,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             handleChange: e => {
                 setStore ({ ...store, [e.target.name]: e.target.value })
               },
-              handleSubmit: async e => { 
+              handleSubmitLogin: async e => { 
                 try {
                   e.preventDefault()
                   const response = await fetch("https://reqres.in/api/login", {
@@ -27,6 +27,23 @@ const getState = ({ getStore, getActions, setStore }) => {
                   console.error(error)
                 }
             
+              },
+              sendCollabForm: async state => {
+                try {
+                  const actions = getActions()
+                  const store = getStore()
+                  const resp = await fetch( {
+                    method: 'POST',
+                    headers: { "Content-type": "application/json",
+                    authorization: 'Bearer '+ store.user.token },
+                    body: JSON.stringify(state)
+                  })
+                  const data = await resp.json()
+                    await actions.getSingleUser(data.id)
+                    setStore({ currentUser: data })
+                } catch (error) {
+                    console.log(error)
+                }
               }
 		}
 	};

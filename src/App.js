@@ -1,15 +1,15 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Routes ,Route } from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
+//import './main.css'
 import "bootstrap/dist/js/bootstrap.bundle";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@popperjs/core";
 import Home from './views/Home';
 import Login from './views/Login';
-import Previewapp from './views/Previewapp';
 import injectContext from "./store/appContext";
 import CollabForm from "./views/CollabForm";
+import Mushroom from "./views/Mushroom";
 //import Preview from "./views/Previewapp";
 
 const App = () => {
@@ -22,11 +22,11 @@ const App = () => {
         <Routes>
           <Route path="/login" element= {<Login />}>
           </Route>
-          <Route path="/preview" element= {<Previewapp />}>
-          </Route>
           <Route path="/" element= {<Home />}>
           </Route>
           <Route path="/collabform" element= {<CollabForm />}>
+          </Route>
+          <Route path="/mushroom" element= {<Mushroom />}>
           </Route>
         </Routes>
         </Fragment>

@@ -1,11 +1,61 @@
-import React, {useContext} from "react";
-import { Context } from '../store/appContext';
-
+import React, { useContext, useState } from "react";
+import { Context } from "../store/appContext";
 
 function Login() {
-  const {store, actions} = useContext(Context)
+  const { store, actions } = useContext(Context);
+  const [state, setState] = useState({ email: "", password: "" });
+
+  const handleSubmitLogin = (e) => {
+    e.preventDefault();
+    actions.sendForm(state);
+  };
+  const handleChange = (e) => {
+    setState({ ...state, [e.target.name]: e.target.value });
+  };
   return (
     <>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="container px-5">
+          <a className="navbar-brand" href="#!">
+            Myco App
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#!">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#!">
+                  About
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#!">
+                  Contact
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#!">
+                  Services
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-2">
@@ -22,7 +72,7 @@ function Login() {
         </div>
         <div className="row justify-content-center">
           <div className="col-4 align-self-center">
-            <form className="clase-form" onSubmit={e => actions.handleSubmit(e)}>
+            <form className="clase-form" onSubmit={(e) => handleSubmitLogin(e)}>
               <div className="mb-3">
                 <h6 className="text-muted">Inicia sesión</h6>
                 <label for="exampleInputEmail1" className="form-label">
@@ -30,8 +80,8 @@ function Login() {
                 </label>
                 <input
                   type="email"
-                  name= "email"
-                  onChange={e => actions.handleChange(e)}
+                  name="email"
+                  onChange={(e) => actions.handleChange(e)}
                   className="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
@@ -47,7 +97,7 @@ function Login() {
                 <input
                   type="password"
                   name="password"
-                  onChange={e => actions.handleChange(e)}
+                  onChange={(e) => actions.handleChange(e)}
                   className="form-control"
                   id="exampleInputPassword1"
                 />
@@ -58,9 +108,7 @@ function Login() {
               <div>
                 <hr />
                 <h6 className="text-muted">¿Nuevo por acá?</h6>
-                <a className="btn btn-primary">
-                  Regístrate
-                </a>
+                <a className="btn btn-primary">Regístrate</a>
               </div>
             </form>
           </div>
@@ -69,6 +117,5 @@ function Login() {
     </>
   );
 }
-
 
 export default Login;
