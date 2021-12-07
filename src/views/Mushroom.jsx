@@ -29,17 +29,12 @@ function Mushroom() {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#!">
-                  About
+                  Mi cuenta
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#!">
-                  Contact
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#!">
-                  Services
+                  Cerrar sesión
                 </a>
               </li>
             </ul>

@@ -267,7 +267,6 @@ function CollabForm() {
                   placeholder="Adjunta las fotos de tu hongo observado"
                   aria-label="Adjunta las fotos de tu hongo observado"
                 />
-                <a className="btn btn-success">Subir imagen</a>
               </div>
               <div className="contenido mb-3">
                 <input
@@ -278,7 +277,6 @@ function CollabForm() {
                   placeholder="Adjunta las fotos de su esporada (solo si las tienes)"
                   aria-label="Adjunta las fotos de su esporada (solo si las tienes)"
                 />
-                <a className="btn btn-success">Subir imagen</a>
               </div>
             </div>
           </div>
@@ -292,7 +290,7 @@ function CollabForm() {
                     aria-label="With textarea"
                   ></textarea>
                 </div>
-                <button type="submit" className="btn btn-success">
+                <button type="submit" value='Enviar' className="btn btn-success">
                   Enviar formulario
                 </button>
               </div>

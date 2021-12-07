@@ -1,18 +1,20 @@
-const getState = ({ getStore, getActions, setStore }) => {
-	let store = {
-    user: null,
-    email: '',
-    password: ''
-  } 
+const getState = ({ getStore, getActions, setStore }) => { 
+
   return {
-		store, 
+		store: {
+      user: null,
+      email: '',
+      password: ''
+    } , 
 		actions: {
 			// Use getActions to call a function within a fuction
             handleChange: e => {
-                setStore ({ ...store, [e.target.name]: e.target.value })
+              const store = getStore()  
+              setStore ({ ...store, [e.target.name]: e.target.value })
               },
               handleSubmitLogin: async e => { 
                 try {
+                  const store = getStore()
                   e.preventDefault()
                   const response = await fetch("https://reqres.in/api/login", {
                     method: 'POST',
@@ -44,9 +46,26 @@ const getState = ({ getStore, getActions, setStore }) => {
                 } catch (error) {
                     console.log(error)
                 }
-              }
-		}
-	};
+              }, 
+              getMushroom: async state => {
+                try {
+                  const actions = getActions()
+                  const store = getStore()
+                  const resp = await fetch('localhost:5000/mushrooms?id=1&type=consumible', { //url de ejemplo para query params
+                    method: 'GET',
+                    headers: { "Content-type": "application/json",
+                    authorization: 'Bearer '+ store.user.token },
+                  })
+                  const data = await resp.json()
+                    await actions.getSingleMushroom(data.id)
+                    setStore({ currentUser: data })
+                } catch (error) {
+                    console.log(error)
+                }
+
+		          }
+      }
+    }
 };
 
 export default getState;

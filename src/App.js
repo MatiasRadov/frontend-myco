@@ -10,6 +10,8 @@ import Login from './views/Login';
 import injectContext from "./store/appContext";
 import CollabForm from "./views/CollabForm";
 import Mushroom from "./views/Mushroom";
+import Firstview from "./views/Firstview";
+import Register from "./views/Authregister";
 //import Preview from "./views/Previewapp";
 
 const App = () => {
@@ -22,13 +24,18 @@ const App = () => {
         <Routes>
           <Route path="/login" element= {<Login />}>
           </Route>
+          <Route path="/firstview" element= {<Firstview />}>
+          </Route>
           <Route path="/" element= {<Home />}>
           </Route>
           <Route path="/collabform" element= {<CollabForm />}>
           </Route>
           <Route path="/mushroom" element= {<Mushroom />}>
           </Route>
+          <Route path="/register" element= {<Register />}>
+          </Route>
         </Routes>
+        
         </Fragment>
     </Router>
   );

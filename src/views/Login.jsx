@@ -101,7 +101,7 @@ function Login() {
                   className="form-control"
                   id="exampleInputPassword1"
                 />
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" value='Enviar' className="btn btn-primary">
                   Iniciar sesión
                 </button>
               </div>
