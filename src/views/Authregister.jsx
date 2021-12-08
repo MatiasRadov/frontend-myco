@@ -21,5 +21,5 @@ const Authregister = () => {
 
 
 
-export default Authregister 
+export default Authregister; 
 

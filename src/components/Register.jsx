@@ -18,7 +18,7 @@ const Register = () => {
   };
   return (
     <div className="col-6 offset-3">
-      <h1>Register</h1>
+      <h1 className="fst-italic">Register</h1>
       <form onSubmit={(e) => handleSubmit(e)}>
         <div className="mb-3">
           <label for="exampleInputUsername1" className="form-label">

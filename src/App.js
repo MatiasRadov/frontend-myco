@@ -11,8 +11,10 @@ import injectContext from "./store/appContext";
 import CollabForm from "./views/CollabForm";
 import Mushroom from "./views/Mushroom";
 import Firstview from "./views/Firstview";
-import Register from "./views/Authregister";
-//import Preview from "./views/Previewapp";
+//import Register from "./views/Authregister";
+import Authregister from "./views/Authregister";
+import Observations from "./views/Observations";
+
 
 const App = () => {
   return (
@@ -32,7 +34,9 @@ const App = () => {
           </Route>
           <Route path="/mushroom" element= {<Mushroom />}>
           </Route>
-          <Route path="/register" element= {<Register />}>
+          <Route path="/register" element= {<Authregister />}>
+          </Route>
+          <Route path="/observations" element= {<Observations />}>
           </Route>
         </Routes>
         

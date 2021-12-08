@@ -15,8 +15,8 @@ function Home() {
             <p></p>
           </div>
           <div className="container">
-            <div className="row mt-5">
-              <div className="col mt-3 mb-5 justify-content-center">
+            <div className="row mt-5 justify-content-center">
+              <div className="col-10 mt-3 mb-5">
                 <div
                   className="carousel slide carousel-fade"
                   id="mi-carousel"
@@ -26,7 +26,7 @@ function Home() {
                     <div className="carousel-item active">
                       <img
                         className="img-fluid"
-                        src="../images/cordyceps-millitaris.jpg"
+                        src="../images/hongo1.jpg"
                         alt=""
                       />
                     </div>
@@ -162,7 +162,7 @@ function Home() {
                   </a>
                 </div>
               </section>
-              <section className="mb-0">
+              <section className="">
                 <div className="container text-center text-md-start mt-3">
                   <div className="row mt-3">
                     <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
