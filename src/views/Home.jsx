@@ -1,4 +1,5 @@
 import { React } from "react" ;
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -6,9 +7,11 @@ function Home() {
     <>
       <div className="container-fluid">
         <div className="container-fluid bg-dark text-light">
-          <a href="#" className="btn btn-primary float-end mt-3">
-            Iniciar Sesión
-          </a>
+        <Link
+                to="/login"
+            >
+                <a href="#" className="btn btn-success mt-3 float-end">Iniciar Sesión</a>
+        </Link>
           <div className="container bg-dark p-3">
             <h1 className="display-4">Bienvenido a la Myco App</h1>
             <hr />

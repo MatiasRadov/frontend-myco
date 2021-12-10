@@ -14,6 +14,7 @@ import Firstview from "./views/Firstview";
 //import Register from "./views/Authregister";
 import Authregister from "./views/Authregister";
 import Observations from "./views/Observations";
+import UsersLoginExample from "./views/UsersLoginExample";
 
 
 const App = () => {
@@ -37,6 +38,8 @@ const App = () => {
           <Route path="/register" element= {<Authregister />}>
           </Route>
           <Route path="/observations" element= {<Observations />}>
+          </Route>
+          <Route path="/users" element= {<UsersLoginExample />}>
           </Route>
         </Routes>
         

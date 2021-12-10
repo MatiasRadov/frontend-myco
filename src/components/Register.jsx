@@ -21,14 +21,14 @@ const Register = () => {
       <h1 className="fst-italic">Register</h1>
       <form onSubmit={(e) => handleSubmit(e)}>
         <div className="mb-3">
-          <label for="exampleInputUsername1" className="form-label">
+          <label for="exampleInputName1" className="form-label">
             Nombre
           </label>
           <input
             type="text"
             name="first_name"
             className="form-control"
-            id="exampleInputUsername1"
+            id="exampleInputLastName1"
             aria-describedby="emailHelp"
             onChange={(e) => handleChange(e)}
           />
@@ -38,7 +38,7 @@ const Register = () => {
             Apellido
           </label>
           <input
-            type="email"
+            type="text"
             name="Last_name"
             className="form-control"
             id="exampleInputEmail1"

@@ -7,7 +7,7 @@ function Login() {
 
   const handleSubmitLogin = (e) => {
     e.preventDefault();
-    actions.sendForm(state);
+    actions.handleSubmitLogin(state);
   };
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
