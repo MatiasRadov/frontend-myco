@@ -1,7 +1,9 @@
 import { useContext, useState } from "react";
 import { Context } from "../store/appContext";
+import { useHistory } from "react-router-dom";
 
 const Register = () => {
+  let history = useHistory()
   const { actions } = useContext(Context);
   const [state, setState] = useState({
     first_name: "",
@@ -11,7 +13,7 @@ const Register = () => {
   });
   const handleSubmit = (e) => {
     e.preventDefault();
-    actions.sendFormRegister(state);
+    actions.register_user(state, history);
   };
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });

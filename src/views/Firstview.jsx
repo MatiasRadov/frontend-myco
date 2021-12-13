@@ -54,7 +54,7 @@ function Firstview() {
                       <input
                         className="form-control form-control-lg"
                         id="emailAddress"
-                        type="search"
+                        type="text"
                         placeholder="Prueba buscando ramadarius.."
                         data-sb-validations="required,email"
                       />

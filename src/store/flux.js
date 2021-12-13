@@ -1,6 +1,4 @@
-import { createBrowserHistory } from 'history';
 const getState = ({ getStore, getActions, setStore }) => { 
-  let history = createBrowserHistory();
   return {
 		store: {
       user: null,
@@ -18,20 +16,25 @@ const getState = ({ getStore, getActions, setStore }) => {
                 try {
                   const store = getStore()
                   e.preventDefault()
-                  const response = await fetch("https://reqres.in/api/login", {
+                  const response = await fetch("https://enigmatic-scrubland-84232.herokuapp.com/https://3000-purple-primate-ri751mg6.ws-us23.gitpod.io/api/v1/auth/login", {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({email: store.email, password: store.password})
                   })
                   const data = await response.json()
-                  const userLogged = await fetch('https://reqres.in/api/users/' + data.id)
+                  const userLogged = await fetch('https://enigmatic-scrubland-84232.herokuapp.com/https://3000-purple-primate-ri751mg6.ws-us23.gitpod.io/api/v1/auth/user' + data.id)
                   const userLogged_info = await userLogged.json()
+                  localStorage.setItem("auth", JSON.stringify(userLogged_info))
                   setStore({user: userLogged_info.data})
                 } catch (error) {
                   console.error(error)
                 }
-            
               },
+              //revalidate: (user) = () => {
+                //setStore({ CurrentuUser: user })
+              //},
+
+
               sendForm: async state => {
                 try {
                     const actions = getActions()
@@ -50,7 +53,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
               },
               
-              sendFormRegister: async state => {
+              sendFormRegister: async (state, history) => {
                 try {
                     
                     const store = getStore()
@@ -68,6 +71,27 @@ const getState = ({ getStore, getActions, setStore }) => {
                 }
 
               },
+
+              register_user: async (user) => {
+                try {
+                  const actions = getActions()
+                  console.log(actions)
+                  const store = getStore()
+                  console.log(store)
+                  const resp = await
+                  fetch('https://enigmatic-scrubland-84232.herokuapp.com/https://3000-purple-primate-ri751mg6.ws-us23.gitpod.io/api/v1/auth/register', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({first_name: store.first_name, last_name: store.first_name, email: store.email, password: store.password}),
+                  })
+                  const data = await resp.json();
+                  console.log(data)
+                  setStore({...store, currentUser: data })
+                  await actions.register_user(data.access_token)
+              } catch (error) {
+                console.error(error)
+              }
+            },
 
               sendCollabForm: async state => {
                 try {
@@ -120,6 +144,8 @@ const getState = ({ getStore, getActions, setStore }) => {
                 }
 
 		          }
+              // localStorage.setItem(key, value)
+              //revalidate: (user) => {}
       }
     }
 };

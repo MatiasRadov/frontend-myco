@@ -7,11 +7,6 @@ function Home() {
     <>
       <div className="container-fluid">
         <div className="container-fluid bg-dark text-light">
-        <Link
-                to="/login"
-            >
-                <a href="#" className="btn btn-success mt-3 float-end">Iniciar Sesión</a>
-        </Link>
           <div className="container bg-dark p-3">
             <h1 className="display-4">Bienvenido a la Myco App</h1>
             <hr />
@@ -115,7 +110,7 @@ function Home() {
                   partes y que es todo este reino fungi para los neófitos del
                   tema que no sepan nada sobre el asunto.
                 </p>
-                <a href="#" className="btn btn-primary">
+                <a href="#" className="btn btn-success">
                   Saber más
                 </a>
               </div>
@@ -130,7 +125,7 @@ function Home() {
                   muchos hongos comestibles o tóxicos, con algunas
                   características bastante particulares.
                 </p>
-                <a href="#" className="btn btn-primary">
+                <a href="#" className="btn btn-success">
                   Ir a la App
                 </a>
               </div>
@@ -165,7 +160,7 @@ function Home() {
                   </a>
                 </div>
               </section>
-              <section className="">
+              <section className="footer">
                 <div className="container text-center text-md-start mt-3">
                   <div className="row mt-3">
                     <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
@@ -175,51 +170,16 @@ function Home() {
                       <p>Reino fúngico</p>
                     </div>
                     <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                      <h6 className="text-uppercase fw-bold mb-4">Productos</h6>
-                      <p>
-                        <a href="#!" className="text-reset"></a>
-                      </p>
-                      <p>
-                        <a href="#!" className="text-reset">
-                        </a>
-                      </p>
-                      <p>
-                        <a href="#!" className="text-reset"></a>
-                      </p>
-                      <p>
-                        <a href="#!" className="text-reset"></a>
-                      </p>
+                      <h6 className="text-uppercase fw-bold mb-4"></h6>
                     </div>
                     <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                       <h6 className="text-uppercase fw-bold mb-4">
-                        links de interés
                       </h6>
-                      <p>
-                        <a href="#!" className="text-reset"></a>
-                      </p>
-                      <p>
-                        <a href="#!" className="text-reset"></a>
-                      </p>
-                      <p>
-                        <a href="#!" className="text-reset"></a>
-                      </p>
-                      <p>
-                        <a href="#!" className="text-reset"></a>
-                      </p>
                     </div>
                     <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                      <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
+                      <h6 className="text-uppercase fw-bold mb-4">Contacto</h6>
                       <p>
-                        <i className="fas fa-home me-3"></i>
-                      </p>
-                      <p>
-                        <i className="fas fa-envelope me-3"></i>
-                      </p>
-                      <p>
-                        <i className="fas fa-phone me-3"></i>
-                      </p>
-                      <p>
-                        <i className="fas fa-print me-3"></i>
+                        mycoapp@mail.com
                       </p>
                     </div>
                   </div>
