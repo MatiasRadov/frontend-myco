@@ -37,7 +37,7 @@ function Login() {
               <div className="mb-3">
                 <h6 className="text-muted">Inicia sesión</h6>
                 <label htmlFor="exampleInputEmail1" className="form-label">
-                <AiTwotoneMail /> Correo electrónico
+                <span className="badge bg-success"><AiTwotoneMail /></span> Correo electrónico 
                 </label>
                 
                 <input

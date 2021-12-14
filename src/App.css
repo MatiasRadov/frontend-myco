@@ -1,3 +1,7 @@
+.container-home {
+    background-color: #D2F9F1;
+}
+
 .container-login {
     background-color: #D2F9F1;
 }
@@ -20,4 +24,9 @@
 
 .register-div {
     background-color: #D2F9F1;
+}
+
+.navbar {
+    color: #fff;
+    background-color: #317378;
 }

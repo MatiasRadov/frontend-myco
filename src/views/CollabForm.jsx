@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
+import { AiOutlinePaperClip } from "react-icons/ai";
 
 function CollabForm() {
   const { store, actions } = useContext(Context);
@@ -36,7 +37,7 @@ function CollabForm() {
       <div className="container-collab">
         <div className="row">
           <div className="col">
-            <div className="contenido mt-3 mb-5">
+            <div className="contenido mt-3 mb-5 mx-3 text-white">
               <p>
                 Eres mas que un aficionado de los honguitos y tienes muchas
                 observaciones de hongos. Acá es el lugar donde puedes compartir
@@ -51,7 +52,7 @@ function CollabForm() {
         </div>
         <form classname="form mb-3" onSubmit={(e) => handleSubmit(e)}>
           <div className="row">
-            <div className="col-8">
+            <div className="col-8 mx-3">
               <div className="contenido mb-3">
                 <input
                   type="text"
@@ -62,7 +63,7 @@ function CollabForm() {
                   aria-label="Ingresa la especie"
                 />
               </div>
-              <div className="col 8">
+              <div className="col-8">
                 <div className="contenido mb-3">
                   <input
                     type="text"
@@ -74,7 +75,7 @@ function CollabForm() {
                   />
                 </div>
               </div>
-              <div className="col 8">
+              <div className="col-8">
                 <div className="contenido mb-3">
                   <input
                     type="text"
@@ -86,7 +87,7 @@ function CollabForm() {
                   />
                 </div>
               </div>
-              <div className="col 8">
+              <div className="col-8">
                 <div className="contenido mb-3">
                   <input
                     type="text"
@@ -98,7 +99,7 @@ function CollabForm() {
                   />
                 </div>
               </div>
-              <div className="col 8">
+              <div className="col-8">
                 <div className="contenido mb-3">
                   <input
                     type="text"
@@ -112,10 +113,10 @@ function CollabForm() {
               </div>
             </div>
           </div>
-          <div className="row">
+          <div className="row mx-3">
             <div className="col">
               <label for="inputEmail4" className="form-label">
-                Pileo
+              <strong>Pileo</strong>
               </label>
               <div className="contenido mb-3">
                 <input
@@ -160,7 +161,7 @@ function CollabForm() {
             </div>
             <div className="col">
               <label for="inputEmail4" className="form-label">
-                Pie
+                <strong>Pie</strong>
               </label>
               <div className="contenido mb-3">
                 <input
@@ -215,8 +216,9 @@ function CollabForm() {
             </div>
           </div>
           <div className="row">
-            <div className="col">
-              <div className="contenido mb-3">
+            <div className="col mx-3">
+              <div className="contenido mb-3 text-white">
+                <label>Adjunta las fotos de tu hongo observado <AiOutlinePaperClip /></label>
                 <input
                   type="file"
                   name="mush_img"
@@ -226,7 +228,8 @@ function CollabForm() {
                   aria-label="Adjunta las fotos de tu hongo observado"
                 />
               </div>
-              <div className="contenido mb-3">
+              <div className="contenido mb-3 text-white">
+              <label>Adjunta las fotos de tu esporada (solo si las tienes) <AiOutlinePaperClip /></label>
                 <input
                   type="file"
                   name="spore_img"
@@ -239,12 +242,12 @@ function CollabForm() {
             </div>
           </div>
           <div className="row">
-            <div className="col">
+            <div className="col mx-3">
               <div className="contenido mb-5">
-                <div class="input-group">
-                  <span class="input-group-text">Descripción</span>
+                <div className="input-group">
+                  <span className="input-group-text">Descripción</span>
                   <textarea
-                    class="form-control"
+                    className="form-control"
                     aria-label="With textarea"
                   ></textarea>
                 </div>
