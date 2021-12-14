@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import MasterRoute from "../src/layout/masterLayout";
+//import MasterRoute from "../src/layout/masterLayout";
 import "./App.css";
 //import './main.css'
 import "bootstrap/dist/js/bootstrap.bundle";
@@ -26,14 +26,14 @@ const App = () => {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-                <Route path="/login" component={Login} />
-                <Route path="/firstview" component={Firstview} />
-                <Route path="/" component={Home} />
-                <MasterRoute path="/collabform" component={CollabForm} />
-                <Route path="/mushroom" component={Mushroom} />
-                <Route path="/register" component={Authregister} />
-                <Route path="/observations" component={Observations} />
-                <Route path="/users" component={UsersLoginExample} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/firstview" component={Firstview} />
+                <Route exact path="/" component={Home} />
+                <Route exact path="/collabform" component={CollabForm} /> 
+                <Route exact path="/mushroom" component={Mushroom} />
+                <Route exact path="/register" component={Authregister} />
+                <Route exact path="/observations" component={Observations} />
+                <Route exact path="/users" component={UsersLoginExample} />
         </Switch>
       </Fragment>
     </Router>
@@ -41,6 +41,8 @@ const App = () => {
 };
 
 export default injectContext(App);
+
+//privadas: collabform, firstview, observations
 
 /**/
 

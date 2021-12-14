@@ -1,22 +1,24 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
+import { AiTwotoneMail } from "react-icons/ai";
+import { AiFillLock } from "react-icons/ai";
 
 function Login() {
-  const { actions } = useContext(Context);
+  const context  = useContext(Context);
   const [state, setState] = useState({ email: "", password: "" });
 
-  const handleSubmitLogin = (e) => {
-    //e.preventDefault();
-    console.log(state)
-    actions.handleSubmitLogin(state);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    context.actions.login_user(state)
   };
+
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
   return (
     <>
-      <div className="container">
+      <div className="container-login">
         <div className="row justify-content-center">
           <div className="col-2">
             <img
@@ -31,27 +33,28 @@ function Login() {
         </div>
         <div className="row justify-content-center">
           <div className="col-4 align-self-center">
-            <form className="clase-form" onSubmit={(e) => handleSubmitLogin(e)}>
+            <form className="clase-form" onSubmit={(e) => handleSubmit(e)}>
               <div className="mb-3">
                 <h6 className="text-muted">Inicia sesión</h6>
                 <label htmlFor="exampleInputEmail1" className="form-label">
-                  Correo electrónico
+                <AiTwotoneMail /> Correo electrónico
                 </label>
+                
                 <input
                   type="email"
                   name="email"
                   onChange={(e) => handleChange(e)}
                   className="form-control"
                   id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                />
+                  aria-describedby="emailHelp"  
+                /> 
                 <div id="emailHelp" className="form-text text-muted">
                   Nunca compartiremos tu dirección de correo con nadie más.
                 </div>
               </div>
               <div className="mb-3">
                 <label htmlFor="exampleInputPassword1" className="form-label">
-                  Contraseña
+                <AiFillLock /> Contraseña
                 </label>
                 <input
                   type="password"
@@ -60,9 +63,7 @@ function Login() {
                   className="form-control"
                   id="exampleInputPassword1"
                 />
-                <button type="submit" value='Enviar' className="btn btn-primary">
-                  Iniciar sesión
-                </button>
+                  <button className="btn btn-success">Iniciar Sesión</button>
               </div>
               <div>
                 <hr />

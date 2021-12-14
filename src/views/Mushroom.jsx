@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
-import { NavLink } from "react-router-dom";
+//import { NavLink } from "react-router-dom";
 
 function Mushroom() {
   const { store, actions } = useContext(Context);

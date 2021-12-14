@@ -19,11 +19,11 @@ const Register = () => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
   return (
-    <div className="col-6 offset-3">
+    <div className="register-div col-6 offset-3">
       <h1 className="fst-italic">Register</h1>
       <form onSubmit={(e) => handleSubmit(e)}>
         <div className="mb-3">
-          <label for="exampleInputName1" className="form-label">
+          <label htmlFor="exampleInputName1" className="form-label">
             Nombre
           </label>
           <input
@@ -36,7 +36,7 @@ const Register = () => {
           />
         </div>
         <div className="mb-3">
-          <label for="exampleInputEmail1" className="form-label">
+          <label htmlFor="exampleInputEmail1" className="form-label">
             Apellido
           </label>
           <input
@@ -52,7 +52,7 @@ const Register = () => {
           </div>
         </div>
         <div className="mb-3">
-          <label for="exampleInputPassword1" className="form-label">
+          <label htmlFor="exampleInputPassword1" className="form-label">
             Correo
           </label>
           <input
@@ -64,7 +64,7 @@ const Register = () => {
           />
         </div>
         <div className="mb-3">
-          <label for="exampleInputPassword1" className="form-label">
+          <label htmlFor="exampleInputPassword1" className="form-label">
             Contraseña
           </label>
           <input

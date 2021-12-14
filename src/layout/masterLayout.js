@@ -1,6 +1,6 @@
-import { useContext } from "react";
-import { Redirect, Route } from "react-router-dom";
-import { Context } from "../store/appContext";
+//import { useContext } from "react";
+//import { Redirect, Route } from "react-router-dom";
+//import { Context } from "../store/appContext";
 
 const Master = ({ children }) => {
   return <div>{children}</div>;

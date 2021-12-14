@@ -1,5 +1,6 @@
 import { React } from "react" ;
-import { Link } from "react-router-dom";
+import { AiTwotoneMail } from "react-icons/ai";
+//import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -179,7 +180,7 @@ function Home() {
                     <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                       <h6 className="text-uppercase fw-bold mb-4">Contacto</h6>
                       <p>
-                        mycoapp@mail.com
+                      <AiTwotoneMail /> mycoapp@mail.com
                       </p>
                     </div>
                   </div>

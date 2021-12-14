@@ -16,7 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
                 try {
                   const store = getStore()
                   e.preventDefault()
-                  const response = await fetch("https://enigmatic-scrubland-84232.herokuapp.com/https://3000-purple-primate-ri751mg6.ws-us23.gitpod.io/api/v1/auth/login", {
+                  const response = await fetch('https://enigmatic-scrubland-84232.herokuapp.com/https://3000-purple-primate-ri751mg6.ws-us23.gitpod.io/api/v1/auth/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({email: store.email, password: store.password})
@@ -30,9 +30,27 @@ const getState = ({ getStore, getActions, setStore }) => {
                   console.error(error)
                 }
               },
-              //revalidate: (user) = () => {
-                //setStore({ CurrentuUser: user })
-              //},
+              revalidate: (user) => {
+                setStore({ CurrentUser: user })
+              },
+
+              login_user: async (user) => {
+                console.log(user)
+                try {
+                  const userSaved = await
+                  fetch("https://3000-purple-primate-ri751mg6.ws-us23.gitpod.io/api/v1/auth/login", {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(user),
+                  })
+                  setStore({ user: userSaved.user[0]});
+                  setStore({ access_token: userSaved.access_token});
+                  localStorage.setItem('access_token', userSaved.access_token)
+                  //history.push('/firstview')
+              } catch (error) {
+                console.error(error)
+              }
+            },
 
 
               sendForm: async state => {
@@ -151,3 +169,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 };
 
 export default getState;
+
+/*const getState = ({ getStore, getActions, setStore}) => {
+  return (
+      store: {
+          currentUser: null
+      } ,
+      actions: {
+          login: async (user_data) => {
+              try {
+               const resp = await fetch("localhost:5000/mushrooms?id=1&type=consumible", {
+                  method: "POST",
+                  headers: {"Content-type": "application/json"},
+                  body: JSON.stringify(user_data)
+               })
+               const data = await resp.json()
+               setStore({ currentUser: data})
+              } catch (error) {
+               console.log(error)
+              }
+          }
+      }
+  )
+}
+
+export default getState*/
