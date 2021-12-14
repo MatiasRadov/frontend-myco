@@ -4,7 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       user: null,
       userData: null,
       email: '',
-      password: ''
+      password: '',
     } , 
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -34,22 +34,20 @@ const getState = ({ getStore, getActions, setStore }) => {
                 setStore({ CurrentUser: user })
               },
 
-              login_user: async (user) => {
-                console.log(user)
-                try {
-                  const userSaved = await
-                  fetch("https://3000-purple-primate-ri751mg6.ws-us23.gitpod.io/api/v1/auth/login", {
+              login_user: async (user, history) => {
+                console.log(user, history)
+                
+                  const userSaved = await fetch("https://3000-purple-primate-ri751mg6.ws-us23.gitpod.io/api/v1/auth/login", {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify(user),
                   })
-                  setStore({ user: userSaved.user[0]});
-                  setStore({ access_token: userSaved.access_token});
-                  localStorage.setItem('access_token', userSaved.access_token)
-                  //history.push('/firstview')
-              } catch (error) {
-                console.error(error)
-              }
+                  const resp = await userSaved.json ()
+                  console.log(resp)
+                  setStore({ user: resp.User[0]});
+                  setStore({ access_token: resp.access_token});
+                  localStorage.setItem('access_token', resp.access_token)
+                  history.push('/firstview')
             },
 
 
@@ -91,7 +89,7 @@ const getState = ({ getStore, getActions, setStore }) => {
               },
 
               register_user: async (user) => {
-                try {
+                
                   const actions = getActions()
                   console.log(actions)
                   const store = getStore()
@@ -106,9 +104,6 @@ const getState = ({ getStore, getActions, setStore }) => {
                   console.log(data)
                   setStore({...store, currentUser: data })
                   await actions.register_user(data.access_token)
-              } catch (error) {
-                console.error(error)
-              }
             },
 
               sendCollabForm: async state => {

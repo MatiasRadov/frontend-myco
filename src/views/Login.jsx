@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { AiTwotoneMail } from "react-icons/ai";
 import { AiFillLock } from "react-icons/ai";
 
@@ -8,9 +8,12 @@ function Login() {
   const context  = useContext(Context);
   const [state, setState] = useState({ email: "", password: "" });
 
+  let history = useHistory()
+  console.log(history)
   const handleSubmit = (e) => {
     e.preventDefault();
-    context.actions.login_user(state)
+    
+    context.actions.login_user(state, history)
   };
 
   const handleChange = (e) => {

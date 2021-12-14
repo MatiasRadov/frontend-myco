@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-//import MasterRoute from "../src/layout/masterLayout";
+import MasterRoute from "../src/layout/masterLayout";
 import "./App.css";
 //import './main.css'
 import "bootstrap/dist/js/bootstrap.bundle";
@@ -27,7 +27,7 @@ const App = () => {
             renders the first one that matches the current URL. */}
         <Switch>
                 <Route exact path="/login" component={Login} />
-                <Route exact path="/firstview" component={Firstview} />
+                <MasterRoute exact path="/firstview" component={Firstview} />
                 <Route exact path="/" component={Home} />
                 <Route exact path="/collabform" component={CollabForm} /> 
                 <Route exact path="/mushroom" component={Mushroom} />
