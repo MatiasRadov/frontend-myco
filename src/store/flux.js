@@ -35,9 +35,9 @@ const getState = ({ getStore, getActions, setStore }) => {
               },
 
               login_user: async (user, history) => {
-                console.log(user, history)
+                //console.log(user, history)
                 
-                  const userSaved = await fetch("https://3000-purple-primate-ri751mg6.ws-us23.gitpod.io/api/v1/auth/login", {
+                  const userSaved = await fetch("https://3000-amaranth-ferret-7ryvtxp5.ws-us23.gitpod.io/api/v1/auth/login", {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify(user),
@@ -157,6 +157,17 @@ const getState = ({ getStore, getActions, setStore }) => {
                 }
 
 		          }
+              /*var requestOptions = {
+              method: 'GET',
+              redirect: 'follow'
+              };
+
+                fetch("{{url}}/mushrooms", requestOptions)
+                .then(response => response.text())
+                .then(result => console.log(result))
+                .catch(error => console.log('error', error));*/
+              
+              
               // localStorage.setItem(key, value)
               //revalidate: (user) => {}
       }
@@ -189,3 +200,5 @@ export default getState;
 }
 
 export default getState*/
+
+

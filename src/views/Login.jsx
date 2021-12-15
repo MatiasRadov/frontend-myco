@@ -12,7 +12,6 @@ function Login() {
   console.log(history)
   const handleSubmit = (e) => {
     e.preventDefault();
-    
     context.actions.login_user(state, history)
   };
 
