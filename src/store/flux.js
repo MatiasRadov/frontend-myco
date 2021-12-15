@@ -5,6 +5,10 @@ const getState = ({ getStore, getActions, setStore }) => {
       userData: null,
       email: '',
       password: '',
+      first_name: '',
+      last_name: '',
+      token: '',
+
     } , 
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -44,13 +48,40 @@ const getState = ({ getStore, getActions, setStore }) => {
                   })
                   const resp = await userSaved.json ()
                   console.log(resp)
-                  setStore({ user: resp.User[0]});
-                  setStore({ access_token: resp.access_token});
-                  localStorage.setItem('access_token', resp.access_token)
+                  setStore({ user: resp.user[0]});
+                  setStore({ access_token: resp.token});
+                  localStorage.setItem('token', resp.token)
                   history.push('/firstview')
             },
-
-
+      /*         login_user: async (email, password, history) => {
+                    const opts = {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json"
+                      },
+                      body:JSON.stringify({
+                        email: email,
+                        password: password
+                      })
+                    };
+                    try{ 
+                        const userSaved = await fetch("https://3000-amaranth-ferret-7ryvtxp5.ws-us23.gitpod.io/api/v1/auth/login")
+                        if (userSaved.status !== 200){
+                          alert("There has been some error");
+                          return false;
+                        }
+                        
+                        const resp = await userSaved.json ()
+                          console.log("Esto viene del Backend", resp);
+                          localStorage.setItem('access_token', resp.access_token)
+                          return true;
+                          //history.push('/firstview')
+                      }
+                      catch(error) {
+                        console.error("Acá hay algo malo")
+                      }
+                    },            */
+              
               sendForm: async state => {
                 try {
                     const actions = getActions()
@@ -89,21 +120,23 @@ const getState = ({ getStore, getActions, setStore }) => {
               },
 
               register_user: async (user) => {
-                
+                try {
                   const actions = getActions()
-                  console.log(actions)
                   const store = getStore()
-                  console.log(store)
-                  const resp = await
-                  fetch('https://enigmatic-scrubland-84232.herokuapp.com/https://3000-purple-primate-ri751mg6.ws-us23.gitpod.io/api/v1/auth/register', {
+                  const resp = await 
+                  fetch('https://3000-amaranth-ferret-7ryvtxp5.ws-us23.gitpod.io/api/v1/auth/register', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({first_name: store.first_name, last_name: store.first_name, email: store.email, password: store.password}),
+                    body: JSON.stringify(user),
                   })
                   const data = await resp.json();
-                  console.log(data)
+                  //console.log(data)
                   setStore({...store, currentUser: data })
                   await actions.register_user(data.access_token)
+              } catch (error) {
+                console.error(error)
+              }
+          
             },
 
               sendCollabForm: async state => {

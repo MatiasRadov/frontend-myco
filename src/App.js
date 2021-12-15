@@ -14,9 +14,12 @@ import Mushroom from "./views/Mushroom";
 import Firstview from "./views/Firstview";
 //import Register from "./views/Authregister";
 import Authregister from "./views/Authregister";
+
 import Observations from "./views/Observations";
 import UsersLoginExample from "./views/UsersLoginExample";
 import { Navbar } from "./components/Navbar";
+import MushObserver from "./views/Observationview";
+
 
 const App = () => {
   return (
@@ -30,8 +33,9 @@ const App = () => {
                 <MasterRoute exact path="/firstview" component={Firstview} />
                 <Route exact path="/" component={Home} />
                 <Route exact path="/collabform" component={CollabForm} /> 
-                <Route exact path="/mushroom" component={Mushroom} />
                 <Route exact path="/register" component={Authregister} />
+                <Route exact path="/mushroom" component={Mushroom} />
+                <Route exact path="/mushobservation" component={MushObserver} />
                 <Route exact path="/observations" component={Observations} />
                 <Route exact path="/users" component={UsersLoginExample} />
         </Switch>
