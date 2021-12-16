@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import { AiOutlinePaperClip } from "react-icons/ai";
 
+
 const MushObserver = () => {
   const store = useContext(Context);
   const [formData, setFormData] = useState({
@@ -12,7 +13,7 @@ const MushObserver = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    store.actions.NOMBREDELFLUX(formData);
+    store.actions.observation_register(formData);
   };
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -64,6 +65,7 @@ const MushObserver = () => {
               <span className="input-group-text">Descripción</span>
               <textarea
                 placeholder= "Acá podrías incluir en que localidad viste tu hongo o alguna pregunta que tengas del mismo"
+                name="observation_body"
                 className="form-control"
                 aria-label="With textarea"
               ></textarea>

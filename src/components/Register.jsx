@@ -8,6 +8,7 @@ const Register = () => {
     last_name: "",
     email: "",
     password: "",
+    confirm_password: "",
   });
 
   const [error, setError] = useState(null);
@@ -17,6 +18,7 @@ const Register = () => {
     if (!regexPass.test(password)) {
       setError("Tu contraseña debe contener como minimo 8 caracteres, sin espacios, por lo menos un número, una letra y un caracter especial ! # $ % & ? ");
     }
+    
     return password ;
   };
 

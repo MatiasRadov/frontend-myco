@@ -16,6 +16,7 @@ function Login() {
   };
 
   const handleChange = (e) => {
+    console.log(e.target.name, e.target.value )
     setState({ ...state, [e.target.name]: e.target.value });
   };
   return (

@@ -39,7 +39,7 @@ const getState = ({ getStore, getActions, setStore }) => {
               },
 
               login_user: async (user, history) => {
-                //console.log(user, history)
+                console.log(user, history)
                 
                   const userSaved = await fetch("https://3000-amaranth-ferret-7ryvtxp5.ws-us23.gitpod.io/api/v1/auth/login", {
                     method: 'POST',
@@ -82,7 +82,7 @@ const getState = ({ getStore, getActions, setStore }) => {
                       }
                     },            */
               
-              sendForm: async state => {
+                observation_register: async state => {
                 try {
                     const actions = getActions()
                     const store = getStore()
