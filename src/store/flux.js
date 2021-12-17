@@ -62,7 +62,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         const resp = await userSaved.json();
         console.log(resp);
         setStore({ user: resp.user[0] });
-        setStore({ access_token: resp.token });
+        setStore({ token: resp.token });
         localStorage.setItem("token", resp.token);
         history.push("/firstview");
       },

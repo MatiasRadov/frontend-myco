@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Context } from "../store/appContext";
-import { Link } from "react-router-dom";
+
 
 const Register = () => {
   const store = useContext(Context);
@@ -18,7 +18,7 @@ const Register = () => {
     const regexPass = /(?=.{8,})(?=.*[a-zA-Z])(?=.*\d)/;
     if (!regexPass.test(password)) {
       setError(
-        "Tu contraseña debe contener como minimo 8 caracteres, sin espacios, por lo menos un número, una letra y un caracter especial ! # $ % & ? "
+        "Tu contraseña debe contener como minimo 8 caracteres, sin espacios, por lo menos un número y una letra"
       );
     }
 
@@ -37,9 +37,9 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
+    store.actions.register_user(formData);
     const parsePassword = validatePassword(formData.password);
     const parseEmail = validateEmail(formData.email);
-    store.actions.register_user(formData);
   };
   const handleChange = (e) => {
     setFormData({
@@ -57,6 +57,7 @@ const Register = () => {
             <div className="form-group">
               <label htmlFor="first_name">Primer nombre</label>
               <input
+
                 type="text"
                 className="form-control"
                 name="first_name"
@@ -98,9 +99,13 @@ const Register = () => {
                 onChange={handleChange}
               />
             </div>
-            <Link to="/login">
-              <div className="btn btn-success">Regístrate</div>
-            </Link>
+         
+            <button
+              type="submit"
+              className="btn btn-lg btn-success btn-block">
+                  Registrate
+            </button>
+   
           </form>
         </div>
       </div>

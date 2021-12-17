@@ -2,23 +2,22 @@ import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 //import { NavLink } from "react-router-dom";
 
-function MushroomPleoratus() {
+function MushroomParis() {
   const { store, actions } = useContext(Context);
   return (
     <>
-      <div className="container-pleurotus">
-      <div className="px-4 px-lg-5">
+      <div className="container px-4 px-lg-5">
         <div className="row gx-4 gx-lg-5 align-items-center my-5">
           <div className="col-lg-7">
             <img
               className="img-fluid rounded mb-4 mb-lg-0"
-              src="https://mycoapp.s3.amazonaws.com/Mushrooms/Pleorotus.jpg"
+              src="https://mycoapp.s3.amazonaws.com/Mushrooms/Cultivo_agaricus.jpg"
               alt="..."
             />
           </div>
           <div className="col-lg-5">
-            <h1 className="font-weight-light text-muted"> Pleurotus ostreatus </h1>
-            <h1 className="font-weight-light"> Champiñon Ostra </h1>
+            <h1 className="font-weight-light text-muted"> Agaricus bisporus </h1>
+            <h1 className="font-weight-light"> Hongo Paris, Champiñones.  </h1>
           </div>
         </div>
         <div className="row gx-4 gx-lg-5">
@@ -27,8 +26,7 @@ function MushroomPleoratus() {
               <div className="card-body">
                 <h2 className="card-title">¿Es comestible?</h2>
                 <p className="card-text">
-                  Este hongo es comestible y muy sabroso
-                </p>
+                Es la especie de hongo comestible más comúnmente usada para la cocina.                 </p>
               </div>
             </div>
           </div>
@@ -47,8 +45,7 @@ function MushroomPleoratus() {
               <div className="card-body">
                 <h2 className="card-title">¿Dónde lo puedo encontrar?</h2>
                 <p className="card-text">
-                  Lo puedes encontrar en varias partes del mundo debido a su cultivo comercial. 
-                </p>
+                En toda la Naturaleza, crece sobre todo en bosques </p>
               </div>
             </div>
           </div>
@@ -57,28 +54,31 @@ function MushroomPleoratus() {
               <p className="text-white m-0">
                 <div>
                   <ul>
-                    <h1>Pleurotus con vegetales y papa camote</h1>
+                    <h1>Ceviche de Champiñones</h1>
                     <h3>Ingredientes</h3>
-                    <li>2 papas camotes grandes</li>
-                    <li>1 bandeja champiñones ostras (puede ser reemplazado por cualquier tipo de champiñones</li>
-                    <li>1 zapallo italiano mediano</li>
-                    <li>1 pimiento morón verde</li>
-                    <li>1 zanahoria grande</li>
-                    <li>1 atado cilantro</li>
-                    <li>1 pizca sal de mar</li>
-                    <li>1 pizca pimienta gruesa</li>
-                    <li>3 cditas de salsa de soya pequeña </li>
+                    <li>200 g champiñones de París, limpios y cortados en cubitos</li>
+                    <li>2 cebollines, cortados en rodelas finas</li>
+                    <li>1/2 pimentón rojo, picado en cubitos</li>
+                    <li>1/2 pimentón verde, cortado en cubitos</li>
+                    <li>1-2 láminas jengibre fresco, rallado</li>
+                    <li>1/2 taza jugo de limón, recién exprimido</li>
+                    <li>1/2 taza cilantro fresco, picado finamente</li>
+                    <li>Pimienta negra, recién molida</li>
+                    <li>Aceite de oliva</li>
+                    <li>2 cdas. maní picado (opcional, pero recomendado!)</li>
+
                     <h3>Instrucciones</h3>
-                    <li>Las papas camotes 🍠 se lavan, se ponen a hervir con piel, una vez cocidas se les hace un corte central a lo largo y se puede rellenar con queso 🧀 y cilantro, para llevar al horno a derretir.</li>
-                    <li>Las verduras se lavan, pelan y se pican en tiritas, se saltean en aceite de oliva, la zanahoria, zapallo italiano, el morón y una vez que están las verduras listas, al final se le incorpora los champiñones ostras, se le agrega sal o solo pimienta y salsa de soya.</li>
-                    
+                    <li>Incorpora a un bol los champiñones, el cebollín picado, los pimentones, la ralladura de jengibre y el cilantro picado.</li>
+                    <li>Deja reposar adentro del refrigerador por unos minutos para que todos los sabores de integren.</li>
+                    <li>Esparce el maní picado y sirve acompañado con tostadas.</li>
+                    <li>A disfrutar!</li>
+                                        
                   </ul>
                 </div>
               </p>
             </div>
           </div>
         </div>
-      </div>
       </div>
       <footer className="py-5 bg-dark">
         <div className="container px-4 px-lg-5">
@@ -91,4 +91,4 @@ function MushroomPleoratus() {
   );
 }
 
-export default MushroomPleoratus;
+export default MushroomParis;
