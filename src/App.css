@@ -16,12 +16,16 @@ a{color:#fff!important}
     background-color: #D2F9F1;
 }
 
+.caja {
+    background-color: #D2F9F1;
+}
+
 .container-collab {
     background-color: #50B3BB;
 }
 
 .container-observations {
-    background-color: #317378;
+    background-color: #50B3BB;
 }
 
 .register-div {
@@ -41,3 +45,29 @@ a{color:#fff!important}
 .firstFooter {
     height: 300px;
 }
+.featuresIcons {
+    height: 500px;
+}
+
+.search-bar {
+    position: relative;
+    width: 100%;
+}
+
+.search-bar input {
+    width: 100%;
+    border: none;
+    background: var(--input);
+    color: var(--texto);
+    height: 40px;
+    border-radius: 100px;
+    padding: 0 20px 0 40px;
+}
+
+.search-bar .icono {
+    position: absolute;
+    top: 6px;
+    left: 15px;
+    color: var(--texto);
+
+} 
