@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import { AiOutlinePaperClip } from "react-icons/ai";
+import UploadImageToS3WithNativeSdk from "../components/UploadImageToS3WithNativeSdk"
 
 
 const MushObserver = () => {
@@ -9,7 +10,7 @@ const MushObserver = () => {
     Mushroom_name: "",
     body: "",
     img_url: "",
-  });
+  }); console.log('parent rendered')
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
@@ -47,14 +48,7 @@ const MushObserver = () => {
               Adjunta una foto de tu observación
               <AiOutlinePaperClip />
             </label>
-            <input
-              type="file"
-              name="img_url"
-              onChange={(e) => handleChange(e)}
-              className="form-control"
-              placeholder="Foto de tu observación"
-              aria-label="Adjunta las fotos de su esporada (solo si las tienes)"
-            />
+            <UploadImageToS3WithNativeSdk/>
           </div>
         </div>
       </div>

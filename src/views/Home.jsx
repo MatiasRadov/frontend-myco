@@ -25,25 +25,25 @@ function Home() {
                     <div className="carousel-item active">
                       <img
                         className="img-fluid"
-                        src="../images/hongo1.jpg"
+                        src="../images/hongo2.jpg"
                         alt=""
                       />
                     </div>
                     <div className="carousel-item" data-bs-interval="5000">
                       <div className="carousel-caption">
                         <h5>Reino fúngico</h5>
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>mushroom kingdom</p>
                       </div>
                       <img
                         className="img-fluid"
-                        src="../images/hongo2.jpg"
+                        src="../images/hongo3.jpg"
                         alt=""
                       />
                     </div>
                     <div className="carousel-item">
                       <img
                         className="img-fluid"
-                        src="../images/hongo3.jpg"
+                        src="../images/Mycena-abramsii.jpg"
                         alt=""
                       />
                     </div>

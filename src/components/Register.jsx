@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const store = useContext(Context);
@@ -16,10 +17,12 @@ const Register = () => {
   const validatePassword = (password) => {
     const regexPass = /(?=.{8,})(?=.*[a-zA-Z])(?=.*\d)/;
     if (!regexPass.test(password)) {
-      setError("Tu contraseña debe contener como minimo 8 caracteres, sin espacios, por lo menos un número, una letra y un caracter especial ! # $ % & ? ");
+      setError(
+        "Tu contraseña debe contener como minimo 8 caracteres, sin espacios, por lo menos un número, una letra y un caracter especial ! # $ % & ? "
+      );
     }
-    
-    return password ;
+
+    return password;
   };
 
   const validateEmail = (email) => {
@@ -95,9 +98,9 @@ const Register = () => {
                 onChange={handleChange}
               />
             </div>
-            <button type="submit" className="btn btn-lg btn-success btn-block">
-              Registrate
-            </button>
+            <Link to="/login">
+              <div className="btn btn-success">Regístrate</div>
+            </Link>
           </form>
         </div>
       </div>
@@ -107,10 +110,7 @@ const Register = () => {
 
 export default Register;
 
-
-
-
-  /* 
+/* 
   return (
     <div className="register-div col-6 offset-3">
       <h1 className="fst-italic">Register</h1>
