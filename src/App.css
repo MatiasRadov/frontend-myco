@@ -32,3 +32,12 @@ a{color:#fff!important}
     color: #fff;
     background-color: #317378;
 }
+
+.card-info {
+    border-width:2px solid;
+    border-color: #317378;
+}
+
+.firstFooter {
+    height: 300px;
+}

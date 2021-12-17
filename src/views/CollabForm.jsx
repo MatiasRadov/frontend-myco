@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import { AiOutlinePaperClip } from "react-icons/ai";
+import UploadImageToS3WithNativeSdk from "../components/UploadImageToS3WithNativeSdk";
 
 function CollabForm() {
   const { store, actions } = useContext(Context);
@@ -219,25 +220,11 @@ function CollabForm() {
             <div className="col mx-3">
               <div className="contenido mb-3 text-white">
                 <label>Adjunta las fotos de tu hongo observado <AiOutlinePaperClip /></label>
-                <input
-                  type="file"
-                  name="mush_img"
-                  onChange={(e) => handleChange(e)}
-                  className="form-control"
-                  placeholder="Adjunta las fotos de tu hongo observado"
-                  aria-label="Adjunta las fotos de tu hongo observado"
-                />
+                <UploadImageToS3WithNativeSdk/>
               </div>
               <div className="contenido mb-3 text-white">
               <label>Adjunta las fotos de tu esporada (solo si las tienes) <AiOutlinePaperClip /></label>
-                <input
-                  type="file"
-                  name="spore_img"
-                  onChange={(e) => handleChange(e)}
-                  className="form-control"
-                  placeholder="Adjunta las fotos de su esporada (solo si las tienes)"
-                  aria-label="Adjunta las fotos de su esporada (solo si las tienes)"
-                />
+                <UploadImageToS3WithNativeSdk/>
               </div>
             </div>
           </div>

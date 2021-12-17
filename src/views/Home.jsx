@@ -118,7 +118,10 @@ function Home() {
             </div>
           </div>
           <div className="col-4 mt-5 mb-5">
-            <div className="card">
+            <img className= "img" src="./images/png/Fungis-03.png" alt="" />
+          </div>
+          <div className="col-4 mt-5 mb-5">
+            <div className="card card-info">
               <div className="card-body">
                 <h5 className="card-title">Myco App</h5>
                 <p className="card-text">
@@ -136,35 +139,10 @@ function Home() {
         <div className="row">
           <div className="col">
             <footer className="text-center text-lg-start bg-light text-muted">
-              <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-                <div className="me-5 d-none d-lg-block">
-                  <span>Conéctate con nosotros en las redes sociales:</span>
-                </div>
-                <div>
-                  <a href="" className="me-4 text-reset">
-                    <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a href="" className="me-4 text-reset">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                  <a href="" className="me-4 text-reset">
-                    <i className="fab fa-google"></i>
-                  </a>
-                  <a href="" className="me-4 text-reset">
-                    <i className="fab fa-instagram"></i>
-                  </a>
-                  <a href="" className="me-4 text-reset">
-                    <i className="fab fa-linkedin"></i>
-                  </a>
-                  <a href="" className="me-4 text-reset">
-                    <i className="fab fa-github"></i>
-                  </a>
-                </div>
-              </section>
               <section className="footer">
                 <div className="container text-center text-md-start mt-3">
                   <div className="row mt-3">
-                    <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <div className="col-md-3 col-lg-4 col-xl-3 pt-3 mx-auto mb-4">
                       <h6 className="text-uppercase fw-bold mb-4">
                         <i className="fas fa-gem me-3"></i>Myco App
                       </h6>
@@ -177,7 +155,7 @@ function Home() {
                       <h6 className="text-uppercase fw-bold mb-4">
                       </h6>
                     </div>
-                    <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <div className="col-md-4 col-lg-3 col-xl-3 pt-3 mx-auto mb-md-0 mb-4">
                       <h6 className="text-uppercase fw-bold mb-4">Contacto</h6>
                       <p>
                       <AiTwotoneMail /> mycoapp@mail.com

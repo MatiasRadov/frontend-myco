@@ -8,9 +8,7 @@ function Firstview() {
           <div className="row justify-content-center">
             <div className="col-xl-6">
               <div className="text-center text-white">
-                <h1 className="mb-5">
-                  Reino Fúngico
-                </h1>
+                <h1 className="mb-5">Reino Fúngico</h1>
 
                 <form
                   className="form-subscribe"
@@ -86,13 +84,12 @@ function Firstview() {
                   <i className="bi-window m-auto text-primary"></i>
                 </div>
                 <div className="card">
-                <h3>Colaboraciones y observaciones</h3>
-                <p className="lead mb-0">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Debitis inventore praesentium et, nisi incidunt perferendis
-                  vel adipisci fugit reprehenderit commodi error corrupti earum
-                  quam quo autem ratione saepe corporis est.!
-                </p>
+                  <h3>Colaboraciones y observaciones</h3>
+                  <p className="lead mb-0">
+                    En esta sección podrás acceder a colaboraciones hechas por
+                    otros usuarios, así como a observaciones de distintos tipos
+                    de hongos con algunos de sus datos.
+                  </p>
                 </div>
               </div>
             </div>
@@ -102,13 +99,13 @@ function Firstview() {
                   <i className="bi-layers m-auto text-primary"></i>
                 </div>
                 <div className="card">
-                <h3>Publicaciones y consultas</h3>
-                <p className="lead mb-0">
-                  Acá se pueden ver otras consultas de otros usuarios o
-                  publicaciones de usaurios colaboradores con observaciones o
-                  investigaciones que ellos hayan realizado reciente mente y
-                  quieran compartir con la comunidad. !
-                </p>
+                  <h3>Publicaciones y consultas</h3>
+                  <p className="lead mb-0">
+                    Acá se pueden ver otras consultas de otros usuarios o
+                    publicaciones de usaurios colaboradores con observaciones o
+                    investigaciones que ellos hayan realizado reciente mente y
+                    quieran compartir con la comunidad. !
+                  </p>
                 </div>
               </div>
             </div>
@@ -118,18 +115,42 @@ function Firstview() {
                   <i className="bi-terminal m-auto text-primary"></i>
                 </div>
                 <div className="card">
-                <h3>Comida fúngica</h3>
-                <p className="lead mb-0">
-                  Sección especial destinada a que la gente conozca mas de la
-                  cocina fungica y de todos los psosibles platos que podrian
-                  hacerse con ellos.
-                </p>
+                  <h3>Comida fúngica</h3>
+                  <p className="lead mb-0">
+                    Sección especial destinada a que la gente conozca mas de la
+                    cocina fungica y de todos los psosibles platos que podrian
+                    hacerse con ellos.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <div className="row mt-5">
+        <div className="col-12 mt-5">
+          <div className="firstFooter position-relative bg-light">
+            <div className="box bg-dark position-absolute w-25 top-0 start-0">
+            <img className= "img" src="./images/png/Fungis-08.png" alt="" />
+            </div>
+            <div className="box bg-dark position-absolute w-25 top-0 end-0">
+            <img className= "img" src="./images/png/Fungis-09.png" alt="" />
+            </div>
+            <div className="box bg-dark position-absolute w-25 top-50 start-50">
+            <img className= "img" src="./images/png/Fungis-10.png" alt="" />
+            </div>
+            <div className="box bg-dark position-absolute w-25 bottom-50 end-50">
+            <img className= "img" src="./images/png/Fungis-11.png" alt="" />
+            </div>
+            <div className="box bg-dark position-absolute w-25 h-25 bottom-0 start-0">
+            <img className= "img" src="./images/png/Fungis-12.png" alt="" />
+            </div>
+            <div className="box bg-dark position-absolute w-25 h-25 bottom-0 end-0">
+            <img className= "img" src="./images/png/Fungis-13.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

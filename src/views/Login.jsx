@@ -23,7 +23,7 @@ function Login() {
     <>
       <div className="container-login">
         <div className="row justify-content-center">
-          <div className="col-2">
+          <div className="col-2 mt-2">
             <img
               className="img-fluid img-thumbnail rounded-circle"
               width="150"
@@ -73,7 +73,7 @@ function Login() {
                 <h6 className="text-muted">¿Nuevo por acá?</h6>
                 <Link 
                 to= '/register'>
-                  <div className="btn btn-success">Regístrate</div>
+                  <div className="btn btn-success mb-1">Regístrate</div>
                 </Link>
               </div>
             </form>

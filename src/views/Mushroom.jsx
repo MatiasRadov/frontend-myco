@@ -16,8 +16,8 @@ function Mushroom() {
             />
           </div>
           <div className="col-lg-5">
-            <h1 className="font-weight-light text-muted">Nombre científico</h1>
-            <h1 className="font-weight-light">Nombre local</h1>
+            <h1 className="font-weight-light text-muted"> Nombre científico </h1>
+            <h1 className="font-weight-light">Nombre local </h1>
           </div>
         </div>
         <div className="row gx-4 gx-lg-5">
