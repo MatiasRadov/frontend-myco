@@ -1,7 +1,7 @@
 import { React } from "react";
 import { Link } from "react-router-dom";
 
-function Mushcard() {
+function FungicFood() {
   return (
     <div className="container-observations">
       <div className="row mx-3">
@@ -9,12 +9,12 @@ function Mushcard() {
           <div className="card w-75">
             <img
               className="card-img-top"
-              src="../images/Ophiocordyceps sp. Micelio Latino.jpg"
+              src=""
               alt="mush"
               width="100"
             />
             <div className="card-body">
-              <h5 className="card-title">Ophiocordyceps</h5>
+              <h5 className="card-title">Auricularia</h5>
               <h6 className="card-subtitle text-muted">Sp</h6>
               <p className="card-text">Lorem ipsum dolor sit amet.</p>
               <a href="#" className="btn btn-outline-success">
@@ -194,4 +194,4 @@ function Mushcard() {
   );
 }
 
-export default Mushcard;
+export default FungicFood;
