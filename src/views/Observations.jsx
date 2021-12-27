@@ -13,9 +13,9 @@ function Mushcard() {
               width="100"
             />
             <div className="card-body">
-              <h5 className="card-title">Ophiocordyceps</h5>
-              <h6 className="card-subtitle text-muted">Sp</h6>
-              <p className="card-text">Lorem ipsum dolor sit amet.</p>
+              <h5 className="card-title">Cordyceps</h5>
+              <h6 className="card-subtitle text-muted">Militaris</h6>
+              <p className="card-text">Hongo que se caracteriza por infectar hormigas.</p>
               <a href="#" className="btn btn-outline-success">
                 Ver
               </a>
@@ -33,7 +33,7 @@ function Mushcard() {
             <div className="card-body">
               <h5 className="card-title">Trametes</h5>
               <h6 className="card-subtitle text-muted">Versicolor</h6>
-              <p className="card-text">Lorem ipsum dolor sit amet.</p>
+              <p className="card-text">Hongo utilizado en inmunoterapia contra el cáncer en China y Japón.</p>
               <a href="#" className="btn btn-outline-success">
                 Ver
               </a>
@@ -51,7 +51,7 @@ function Mushcard() {
             <div className="card-body">
               <h5 className="card-title">Psilocybe</h5>
               <h6 className="card-subtitle text-muted">Cubensis</h6>
-              <p className="card-text">Lorem ipsum dolor sit amet.</p>
+              <p className="card-text">Uno de los principales hongos alucinogenos del mundo.</p>
               <a href="#" className="btn btn-outline-success">
                 Ver
               </a>
@@ -71,7 +71,7 @@ function Mushcard() {
             <div className="card-body">
               <h5 className="card-title">Amanita</h5>
               <h6 className="card-subtitle text-muted">Muscaria</h6>
-              <p className="card-text">Lorem ipsum dolor sit amet.</p>
+              <p className="card-text">Se presenta siempre cercano a plantaciones de pinos.</p>
               <a href="#" className="btn btn-outline-success">
                 Ver
               </a>
@@ -89,7 +89,7 @@ function Mushcard() {
             <div className="card-body">
               <h5 className="card-title">Batarrea</h5>
               <h6 className="card-subtitle text-muted">Stevenni</h6>
-              <p className="card-text">Lorem ipsum dolor sit amet.</p>
+              <p className="card-text">Hongo poco común que se presenta en zonas áridas.</p>
               <a href="#" className="btn btn-outline-success">
                 Ver
               </a>
@@ -107,7 +107,7 @@ function Mushcard() {
             <div className="card-body">
               <h5 className="card-title">Clathrus</h5>
               <h6 className="card-subtitle text-muted">Crispus</h6>
-              <p className="card-text">Lorem ipsum dolor sit amet.</p>
+              <p className="card-text">Son conocidos como "jaulas rojas". Esta envuelto en un gel viscoso de color marrón oliva que contiene esporas y atrae a las moscas.</p>
               <a href="#" className="btn btn-outline-success">
                 Ver
               </a>
@@ -127,7 +127,7 @@ function Mushcard() {
             <div className="card-body">
               <h5 className="card-title">Geastrum</h5>
               <h6 className="card-subtitle text-muted">Fornicatum</h6>
-              <p className="card-text">Lorem ipsum dolor sit amet.</p>
+              <p className="card-text">Conocidos como estrellas de tierra. Son hongos que esperan su etapa madura para mostrar sus esporas. </p>
               <a href="#" className="btn btn-outline-success">
                 Ver
               </a>
@@ -138,14 +138,14 @@ function Mushcard() {
           <div className="card w-75">
             <img
               className="card-img-top"
-              src="../images/Ramaria sp GVF.jpg"
+              src="../images/Amanita bisporigeria.jpg"
               alt="mush"
               width="100"
             />
             <div className="card-body">
-              <h5 className="card-title">Ramaria</h5>
-              <h6 className="card-subtitle text-muted">Sp</h6>
-              <p className="card-text">Lorem ipsum dolor sit amet.</p>
+              <h5 className="card-title">Amanita</h5>
+              <h6 className="card-subtitle text-muted">Bisporigeria</h6>
+              <p className="card-text">Este de hongo mortalmente tóxico</p>
               <a href="#" className="btn btn-outline-success">
                 Ver
               </a>
@@ -163,7 +163,7 @@ function Mushcard() {
             <div className="card-body">
               <h5 className="card-title">Phallus</h5>
               <h6 className="card-subtitle text-muted">Indusiatus</h6>
-              <p className="card-text">Lorem ipsum dolor sit amet.</p>
+              <p className="card-text">Este hongo se ha encontrado en todas las zonas tropicales del mundo. </p>
               <a href="#" className="btn btn-outline-success">
                 Ver
               </a>
