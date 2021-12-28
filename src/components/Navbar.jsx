@@ -30,11 +30,6 @@ export const Navbar = () => {
                   Inicio
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to='/collabform'>
-                  Colaborador
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
@@ -42,4 +37,8 @@ export const Navbar = () => {
     )
 }
 
-
+/*<li className="nav-item">
+                <Link className="nav-link" to='/collabform'>
+                  Colaborador
+                </Link>
+              </li> */

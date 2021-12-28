@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 function Mushcard() {
   return (
     <div className="container-observations">
+      <a href="./mushobservation">
+        <h6 className="alert">¿Quieres colaborar con tu propia observación?  ¡Regístrala aquí!</h6></a>
       <div className="row mx-3">
         <div className="col-4 pt-5">
           <div className="card w-75">
