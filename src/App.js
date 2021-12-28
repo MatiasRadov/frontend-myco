@@ -20,6 +20,7 @@ import MushObserver from "./views/Observationview";
 import UploadImageToS3WithNativeSdk from "./components/UploadImageToS3WithNativeSdk.jsx";
 import MushroomPleoratus from "./views/MushroomPleurotus";
 import MushroomParis from "./views/MushroomParis";
+import FungicFood from "./views/FungicFood";
 import MushroomCordyceps from "./views/mushroomCordyceps";
 import MushrooTrametes from "./views/MushroomTrametes";
 import MushrooPsilocybe from "./views/MushroomPsilocybe";
@@ -67,6 +68,7 @@ const App = () => {
                 <Route exact path="/mushobservation" component={MushObserver} />
                 <Route exact path="/observations" component={Observations} />
                 <Route exact path="/users" component={UsersLoginExample} />
+                <Route exact path="/fungicfood" component={FungicFood} />
         </Switch>
       </Fragment>
     </Router>

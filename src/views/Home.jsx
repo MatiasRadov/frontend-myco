@@ -9,7 +9,7 @@ function Home() {
       <div className="container-fluid">
         <div className="container-fluid bg-dark text-light">
           <div className="container bg-dark p-3">
-            <h1 className="display-4">Bienvenido a la Myco App</h1>
+            <h1 className="display-4 text-center">Bienvenido a la Myco App</h1>
             <hr />
             <p></p>
           </div>
@@ -158,7 +158,8 @@ function Home() {
                     <div className="col-md-4 col-lg-3 col-xl-3 pt-3 mx-auto mb-md-0 mb-4">
                       <h6 className="text-uppercase fw-bold mb-4">Contacto</h6>
                       <p>
-                      <AiTwotoneMail /> mycoapp@mail.com
+                      <AiTwotoneMail /> bastihc@gmail.com 
+                      matias.traducciones@gmail.com                
                       </p>
                     </div>
                   </div>

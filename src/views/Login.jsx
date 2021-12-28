@@ -28,7 +28,7 @@ function Login() {
               className="img-fluid img-thumbnail rounded-circle"
               width="150"
               height="150"
-              src="../images/cordyceps-millitaris.jpg"
+              src="../images/PNG/mycoapplogo.jpeg"
               alt="mushroom"
             />
             <hr />

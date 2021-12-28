@@ -8,6 +8,10 @@ a{color:#fff!important}
     background-color: #D2F9F1;
 }
 
+.container-register {
+    background-color: #D2F9F1;
+}
+
 .container-firstview {
     background-color: #63DAC3;
 }
@@ -24,6 +28,10 @@ a{color:#fff!important}
     background-color: #D2F9F1;
 }
 .container-collab {
+    background-color: #50B3BB;
+}
+
+.container-mushoberver {
     background-color: #50B3BB;
 }
 
