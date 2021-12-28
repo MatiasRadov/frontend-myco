@@ -12,7 +12,7 @@ function MushroomPleoratus() {
           <div className="col-lg-7">
             <img
               className="img-fluid rounded mb-4 mb-lg-0"
-              src="https://mycoapp.s3.amazonaws.com/Mushrooms/Pleorotus.jpg"
+              src="https://mycoapp.s3.amazonaws.com/Mushrooms/Pleorotus.jpg" 
               alt="..."
             />
           </div>

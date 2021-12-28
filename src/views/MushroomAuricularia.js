@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 //import { NavLink } from "react-router-dom";
 
-function MushroomRamaria() {
+function MushroomAuricularia() {
   const { store, actions } = useContext(Context);
   return (
     <>
@@ -88,4 +88,4 @@ function MushroomRamaria() {
   );
 }
 
-export default MushroomRamaria;
+export default MushroomAuricularia;
