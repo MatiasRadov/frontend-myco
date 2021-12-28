@@ -37,9 +37,9 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    store.actions.register_user(formData);
     const parsePassword = validatePassword(formData.password);
     const parseEmail = validateEmail(formData.email);
+    store.actions.register_user(formData);
   };
   const handleChange = (e) => {
     setFormData({

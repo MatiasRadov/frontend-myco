@@ -10,7 +10,6 @@ import Home from "./views/Home";
 import Login from "./views/Login";
 import injectContext from "./store/appContext";
 import CollabForm from "./views/CollabForm";
-import Mushroom from "./views/Mushroom";
 import Firstview from "./views/Firstview";
 //import Register from "./views/Authregister";
 import Authregister from "./views/Authregister";
@@ -19,10 +18,22 @@ import UsersLoginExample from "./views/UsersLoginExample";
 import { Navbar } from "./components/Navbar";
 import MushObserver from "./views/Observationview";
 import UploadImageToS3WithNativeSdk from "./components/UploadImageToS3WithNativeSdk.jsx";
-import MushroomPleoratus from "./views/Mushroom";
+import MushroomPleoratus from "./views/MushroomPleurotus";
 import MushroomParis from "./views/MushroomParis";
 import FungicFood from "./views/FungicFood";
-import Collaboration from "./views/Collaboration";
+import MushroomCordyceps from "./views/mushroomCordyceps";
+import MushrooTrametes from "./views/MushroomTrametes";
+import MushrooPsilocybe from "./views/MushroomPsilocybe";
+import MushrooAmanita from "./views/MushroomAmanita";
+import MushrooBatarrea from "./views/MushroomBetarrea";
+import MushrooClathrus from "./views/MushroomClathrus";
+import MushroomGeastrum from "./views/MushroomGeastrum";
+import MushroomBispori from "./views/MushrromBisporigera";
+import MushroomPhallus from "./views/MushrromPhallus";
+import MushroomLentinula from "./views/MushroomLentinula";
+import MushroomRamaria from "./views/MushroomRamaria";
+import MushroomAuricularia from "./views/MushroomAuricularia";
+import MushroomHericium from "./views/MushroomHericium";
 
 
 const App = () => {
@@ -40,8 +51,20 @@ const App = () => {
                 <Route exact path="/register" component={Authregister} />
                 <Route exact path="/tester" component={UploadImageToS3WithNativeSdk} />
                 <Route exact path="/mushroom-pleoratus" component={MushroomPleoratus} />
+                <Route exact path="/mushroom-cordyceps" component={MushroomCordyceps} />
+                <Route exact path="/mushroom-trametes" component={MushrooTrametes} />
+                <Route exact path="/mushroom-psilocybe" component={MushrooPsilocybe} />
+                <Route exact path="/mushroom-amanita" component={MushrooAmanita} />
+                <Route exact path="/mushroom-clathrus" component={MushrooClathrus} />
+                <Route exact path="/mushroom-geastrum" component={MushroomGeastrum} />
+                <Route exact path="/mushroom-batarrea" component={MushrooBatarrea} />
+                <Route exact path="/mushroom-bispori" component={MushroomBispori} />
+                <Route exact path="/mushroom-lentinula" component={MushroomLentinula} />
+                <Route exact path="/mushroom-auricularia" component={MushroomAuricularia} />
+                <Route exact path="/mushroom-hericium" component={MushroomHericium} />
+                <Route exact path="/mushroom-ramaria" component={MushroomRamaria} />
+                <Route exact path="/mushroom-phallus" component={MushroomPhallus} />
                 <Route exact path="/mushroom-agaricus" component={MushroomParis} />
-                <Route exact path="/collaboration" component={Collaboration} />
                 <Route exact path="/mushobservation" component={MushObserver} />
                 <Route exact path="/observations" component={Observations} />
                 <Route exact path="/users" component={UsersLoginExample} />

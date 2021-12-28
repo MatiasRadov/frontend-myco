@@ -9,7 +9,7 @@ function FungicFood() {
           <div className="card w-75">
             <img
               className="card-img-top"
-              src=""
+              src="../images/Auricularia-auricular-judae.jpg"
               alt="mush"
               width="100"
             />
@@ -27,12 +27,12 @@ function FungicFood() {
           <div className="card w-75">
             <img
               className="card-img-top"
-              src="../images/Trametes versicolor Micelio Latino.jpg"
+              src="../images/Hericium erinaceus.jpg"
               alt="mush"
               width="100"
             />
             <div className="card-body">
-              <h5 className="card-title">Trametes</h5>
+              <h5 className="card-title">Hericium</h5>
               <h6 className="card-subtitle text-muted">Versicolor</h6>
               <p className="card-text">Lorem ipsum dolor sit amet.</p>
               <a href="#" className="btn btn-outline-success">
