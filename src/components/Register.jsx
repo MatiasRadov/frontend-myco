@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import { Context } from "../store/appContext";
-import { Link } from "react-router-dom";
 
 const Register = () => {
   const store = useContext(Context);
@@ -98,9 +97,7 @@ const Register = () => {
                 onChange={handleChange}
               />
             </div>
-            <Link to="/login">
-              <div className="btn btn-lg btn-success btn-block">Registrate</div>
-            </Link>
+              <button type="submit" className="btn btn-lg btn-success btn-block">Registrate</button>
           </form>
         </div>
       </div>

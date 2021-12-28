@@ -1,5 +1,6 @@
 import { React } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 function Firstview() {
   return (
@@ -13,8 +14,14 @@ function Firstview() {
               </div>
               <div className="col-6 d-flex align-items-center offset-3">
                 <div className="search-bar mb-3">
-                  <div className="icono"><AiOutlineSearch/></div>
-                  <input type="search" className="search" placeholder="Prueba buscando Ramadarius" />
+                  <div className="icono">
+                    <AiOutlineSearch />
+                  </div>
+                  <input
+                    type="search"
+                    className="search"
+                    placeholder="Prueba buscando Ramadarius"
+                  />
                 </div>
               </div>
             </div>
@@ -29,7 +36,6 @@ function Firstview() {
       </header>
 
       <section className="features-icons text-center">
-
         <div className="container-body">
           <div className="row mx-2">
             <div className="col-lg-4">
@@ -38,12 +44,16 @@ function Firstview() {
                   <i className="bi-window m-auto text-primary"></i>
                 </div>
                 <div className="card mt-5 mb-5">
-                  <h3>Colaboraciones y observaciones</h3>
+                  <h3>Observaciones</h3>
                   <p className="lead mb-0">
                     En esta sección podrás acceder a colaboraciones hechas por
                     otros usuarios, así como a observaciones de distintos tipos
                     de hongos con algunos de sus datos.
                   </p>
+                  <Link to="./observations">
+                  <button className="btn btn-outline-success my-2">
+                  Observaciones de Hongos</button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -52,15 +62,13 @@ function Firstview() {
                 <div className="features-icons-icon d-flex">
                   <i className="bi-layers m-auto text-primary"></i>
                 </div>
-                <div className="card mt-5 mb-5">
-                  <h3>Publicaciones y consultas</h3>
-                  <p className="lead mb-0">
-                    Acá se pueden ver otras consultas de otros usuarios o
-                    publicaciones de usaurios colaboradores con observaciones o
-                    investigaciones que ellos hayan realizado reciente mente y
-                    quieran compartir con la comunidad. !
-                  </p>
-                </div>
+                  <img
+                    className="img-fluid rounded-circle mt-3"
+                    width="200"
+                    height="200"
+                    src="../images/PNG/mycoapplogo.jpeg"
+                    alt="mushroom"
+                  />
               </div>
             </div>
             <div className="col-lg-4">
@@ -68,13 +76,17 @@ function Firstview() {
                 <div className="features-icons-icon d-flex">
                   <i className="bi-terminal m-auto text-primary"></i>
                 </div>
-                <div className="card mt-5 mb-5">
+                <div className="card d-grid mt-5 mb-5">
                   <h3>Comida fúngica</h3>
                   <p className="lead mb-0">
                     Sección especial destinada a que la gente conozca mas de la
                     cocina fungica y de todos los psosibles platos que podrian
                     hacerse con ellos.
                   </p>
+                  <Link to="./fungicfood">
+                  <button className="btn btn-outline-success my-2">
+                  Ver Hongos Comestibles</button>
+                  </Link>
                 </div>
               </div>
             </div>

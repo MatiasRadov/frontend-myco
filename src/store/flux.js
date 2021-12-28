@@ -50,7 +50,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       login_user: async (user, history) => {
         console.log(user, history);
-
         const userSaved = await fetch(
           "https://3000-amaranth-ferret-7ryvtxp5.ws-us25.gitpod.io/api/v1/auth/login",
           {
@@ -141,7 +140,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           const actions = getActions();
           const store = getStore();
           const resp = await fetch(
-            "https://3000-amaranth-ferret-7ryvtxp5.ws-us23.gitpod.io/api/v1/auth/register",
+            "https://amaranth-ferret-7ryvtxp5.ws-us25.gitpod.io/api/v1/auth/register",
             {
               method: "POST",
               headers: { "Content-Type": "application/json" },
