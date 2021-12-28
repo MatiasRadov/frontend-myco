@@ -107,12 +107,19 @@ function Home() {
               <div className="card-body">
                 <h5 className="card-title">¿Qué es un hongo?</h5>
                 <p className="card-text">
-                  En esta sección explicaremos que es un hongo cuales son su
-                  partes y que es todo este reino fungi para los neófitos del
-                  tema que no sepan nada sobre el asunto.
+                Los hongos son un grupo de microorganismos, que posee características biológicas 
+                  que los diferencian del reino vegetal y del animal, creandose el reingo Fungi</p>
+                  <p>Estos forman un grupo polifilético, es decir, no existe un antepasado común a todos los miembros. 
+                  Muchos de ellos son parásitos o viven sobre materias orgánicas en descomposición.
                 </p>
+                <p>
+                  Sabias tu que las setas son solo el cuerpo fructifero del hongo, y que su parte mas grande (ek micelio) 
+                  se encuentra bajo tierra, haciendo conexiones simbioticas entre las raices de los arboles 
+                  o ayudando a los procesos de descomposición de las materias organicas que estan bajo tierra. 
+                </p>
+                <p> Hay mucho que no sabemos de este hermoso reino y en MycoApp te queremos ayudar a que lo conozcas mejor. </p>
                 <a href="#" className="btn btn-success">
-                  Saber más
+                  Registrate
                 </a>
               </div>
             </div>
