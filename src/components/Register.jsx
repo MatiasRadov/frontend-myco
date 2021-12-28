@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import { Context } from "../store/appContext";
-import { Link } from "react-router-dom";
 
 const Register = () => {
   const store = useContext(Context);
@@ -98,10 +97,18 @@ const Register = () => {
                 onChange={handleChange}
               />
             </div>
+<<<<<<< HEAD
               <div className="btn btn-lg btn-success btn-block"
                     onSubmit={handleSubmit}
               >
                 Registrate</div>
+||||||| 853f27c
+            <Link to="/login">
+              <div className="btn btn-lg btn-success btn-block">Registrate</div>
+            </Link>
+=======
+              <button type="submit" className="btn btn-lg btn-success btn-block">Registrate</button>
+>>>>>>> 9189b34ce916a89c5ea28a9f4ae47303a0d9dc05
           </form>
         </div>
       </div>

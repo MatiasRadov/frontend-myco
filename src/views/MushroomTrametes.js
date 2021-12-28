@@ -57,7 +57,7 @@ function MushrooTrametes() {
               <p className="text-white m-0">
                 <div>
                   <ul>
-                    <h1>Trametes Versicolor. Un trataento contra el cancer.</h1>
+                    <h1>Trametes Versicolor. Un tratamiento contra el cancer.</h1>
                     <p>
                     Este hongo se utiliza como un estimulador del sistema inmune y agente coadyuvante en el tratamiento del
                     cáncer en algunos países de Europa, así como China y Japón.</p> 
