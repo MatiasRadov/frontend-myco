@@ -51,7 +51,7 @@ const Register = () => {
       <div className="row">
         <div className="col-md-6 mt-5 mx-auto">
           <label> {error && error}</label>
-          <form noValidate onSubmit={handleSubmit}>
+          <form>
             <h1 className="h3 mb-3 font-weight-normal"> Registro</h1>
             <div className="form-group">
               <label htmlFor="first_name">Primer nombre</label>
@@ -97,7 +97,18 @@ const Register = () => {
                 onChange={handleChange}
               />
             </div>
+<<<<<<< HEAD
+              <div className="btn btn-lg btn-success btn-block"
+                    onSubmit={handleSubmit}
+              >
+                Registrate</div>
+||||||| 853f27c
+            <Link to="/login">
+              <div className="btn btn-lg btn-success btn-block">Registrate</div>
+            </Link>
+=======
               <button type="submit" className="btn btn-lg btn-success btn-block">Registrate</button>
+>>>>>>> 9189b34ce916a89c5ea28a9f4ae47303a0d9dc05
           </form>
         </div>
       </div>

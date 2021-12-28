@@ -141,7 +141,7 @@ function Mushcard() {
           <div className="card w-75">
             <img
               className="card-img-top"
-              src="../images/Amanita bisporigeria.jpg"
+              src="../images/Amanita bisporigeria.jpgs"
               alt="mush"
               width="100"
             />

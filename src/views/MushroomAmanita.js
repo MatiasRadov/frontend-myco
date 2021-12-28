@@ -57,7 +57,7 @@ function MushrooAmanita() {
               <p className="text-white m-0">
                 <div>
                   <ul>
-                    <h1> Amanita Muscaria. El hongo de </h1>
+                    <h1> Amanita Muscaria.</h1>
                     <p> Este es un hongo muy popular debido a sus caracteristicas enteogenas. Sin embargo este 
                       puede llegar a ser muy tóxico</p> 
                       <p> Este hongo es comunente encontrado en plantaciones de pino. Ya que su micelio ayuda  a la conexion de las raices de los pinos.</p>
